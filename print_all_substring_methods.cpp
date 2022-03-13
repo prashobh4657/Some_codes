@@ -84,9 +84,6 @@ int main()
         cout << "YES" << endl;
     if (substring1 == substring3)
         cout << "YES" << endl;
-
-    for (int i = 0; i < substring3.size(); i++)
-        cout << substring3[i] << endl;
-
+    
     return 0;
 }
