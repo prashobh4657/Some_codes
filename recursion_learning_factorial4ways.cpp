@@ -18,7 +18,7 @@
        Proof :
        https://leetcode.com/problems/min-cost-climbing-stairs/
 
-    1. See submission : https://leetcode.com/submissions/detail/673406237/ (Tail recursive)(can't be memoized)
+    1. See submission : https://leetcode.com/submissions/detail/673406237/ (Tail recursive)(can't be memoized)   (I tried to memoized but can't be memoized i guess, since this question is of single dp hence single dp vector should be there , but in that multiple arguement are there may be increasing dimension of matrix may memoize it but not beneficial)
     2. See submission : https://leetcode.com/submissions/detail/673531061/ (Head recursive code)
     3. See submission : https://leetcode.com/submissions/detail/673531535/ (Head recursive memoized)
     4. See submission : https://leetcode.com/submissions/detail/673571601/ (Tabulation) (Transform: Head recurive memoized --> Tabulation)
