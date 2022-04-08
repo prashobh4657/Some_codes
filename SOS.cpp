@@ -11,6 +11,12 @@ void solve(int idx, vector<int> a, int sum, int curr, string t)
             cout << t << endl;
         return;
     }
+    
+    if(curr==sum)
+    {
+        cout<<t<<endl;
+        return;
+    }
 
     if (a[idx] + curr <= sum)
     {
