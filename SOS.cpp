@@ -12,7 +12,7 @@ void solve(int idx, vector<int> a, int sum, int curr, string t)
         return;
     }
     
-    if(curr==sum)
+    if(curr==sum)  //discard the exploration of further nodes , if curr==sum means answer_till_now is t and just print it and return;
     {
         cout<<t<<endl;
         return;
