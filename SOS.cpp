@@ -12,7 +12,7 @@ void solve(int idx, vector<int> a, int sum, int curr, string t)
         return;
     }
     
-    if(curr==sum)  //discard the exploration of further nodes , if curr==sum means answer_till_now is t and just print it and return;
+    if(curr==sum)  //discard the exploration of further nodes , if curr==sum means answer till now is t, just print it and return;
     {
         cout<<t<<endl;
         return;
@@ -26,13 +26,10 @@ void solve(int idx, vector<int> a, int sum, int curr, string t)
         temp.append(to_string(a[idx])); // instead of backtracking temp variable is used;
 
         solve(idx + 1, a, sum, curr + a[idx], temp);
-
         solve(idx + 1, a, sum, curr, t);
     }
     else
-    {
-        solve(idx + 1, a, sum, curr, t);
-    }
+    solve(idx + 1, a, sum, curr, t);
 }
 int main()
 {
