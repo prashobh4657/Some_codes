@@ -9,6 +9,8 @@ using namespace std;
  Till now diagonal matching is not implmented
  that will be same as in case of n-queen.
  or i will implement it later
+  ==> in this question recursion is not involved;
+  ==> also see article solution, how they implemented using very short code unlike as that of mine;
 */
 bool up(string s, vector<vector<char>> v, int r, int c)
 {
