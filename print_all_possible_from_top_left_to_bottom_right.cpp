@@ -3,6 +3,7 @@ using namespace std;
 #define ll long long
 #define mod 1000000007
 
+// Question : https://www.geeksforgeeks.org/print-all-possible-paths-from-top-left-to-bottom-right-of-a-mxn-matrix/ 
 // Backtracking Solution 
 
 void solve(int i, int j, vector<vector<int>> matrix, string curr, vector<string> &ans)
@@ -43,3 +44,19 @@ int main()
         cout << ans[i] << endl;
     return 0;
 }
+/*
+Input : 
+3 3
+1 2 3
+4 5 6
+7 8 9
+
+Output : 
+1 2 3 6 9
+1 2 5 6 9
+1 2 5 8 9
+1 4 5 6 9
+1 4 5 8 9
+1 4 7 8 9
+
+*/
