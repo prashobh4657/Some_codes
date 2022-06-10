@@ -49,6 +49,7 @@ void changeTree(node *root)
 }
 
 /*
+z1 : dry run on this example
    50
    /\
   2  3
