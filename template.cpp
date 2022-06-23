@@ -7,6 +7,7 @@ using namespace std;
 
 int32_t main()
 {
+    fio;
     int t;
     cin >> t;
     while (t > 0)
