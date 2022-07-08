@@ -15,7 +15,7 @@ public:
     }
 };
 
-bool getPath(node *root, vector<int> &arr, int x)
+bool getPath(node *root, vector<int> &arr, int x) //hypothesis : returns bool value tell whether path exist or not, and also update arr with x if path exist;
 {
     if (root == NULL)
         return false;
