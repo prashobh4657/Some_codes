@@ -44,7 +44,7 @@ int main()
         for (int i = 0; i < arr.size(); i++)
         {
             cout << arr[i];
-            if (i != arr.size() - 1)
+            if (i != arr.size() - 1)  //just formatting the output
                 cout << "->";
         }
     }
