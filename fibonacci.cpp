@@ -1,0 +1,62 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define int long long int
+#define mod 1000000007
+#define endl "\n"
+#define fio                           \
+    ios_base::sync_with_stdio(false); \
+    cin.tie(NULL);
+
+int tabulation_space_optimised(int n) // Time : O(N), Space : O(1);
+{
+    if (n == 0 || n == 1)
+        return n;
+    int prev1 = 1, prev2 = 0, curr;
+    for (int i = 2; i <= n; i++) // dp[i] requires only dp[i-1] and dp[i-2]; That is prev1,prev2;
+    {
+        curr = prev1 + prev2;
+        prev2 = prev1;
+        prev1 = curr;
+    }
+    return curr;
+}
+int tabulation(int n) // Time : O(n), Space : O(n);
+{
+    vector<int> dp(n + 1); // dp[i] denotes (i)th fibonacci;
+    dp[0] = 0;
+    dp[1] = 1;
+    for (int i = 2; i <= n; i++)
+        dp[i] = dp[i - 1] + dp[i - 2];
+    return dp[n];
+}
+
+int recursive_memoize(int n, vector<int> &dp) // Time : O(n), Space : O(n) + O(n)(recursive stack);
+{
+    if (n == 1 || n == 0)
+        return dp[n] = n;
+    if (dp[n] != -1)
+        return dp[n];
+    if (dp[n - 1] == -1)
+        dp[n - 1] = recursive_memoize(n - 1, dp);
+    if (dp[n - 2] == -1)
+        dp[n - 2] = recursive_memoize(n - 2, dp);
+    return dp[n - 1] + dp[n - 2];
+}
+int recursive(int n)
+{
+    if (n == 1 || n == 0)
+        return n;
+    return recursive(n - 1) + recursive(n - 2);
+}
+int32_t main()
+{
+    fio;
+    int n;
+    cin >> n;
+    cout << recursive(n) << endl;
+    vector<int> dp(n + 1, -1);
+    cout << recursive_memoize(n, dp) << endl;
+    cout << tabulation(n) << endl;
+    cout << tabulation_space_optimised(n);
+    return 0;
+}
