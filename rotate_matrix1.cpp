@@ -13,7 +13,6 @@ void rotate(vector<vector<int>> &v)
         vector<int> z;
         for (int j = 0; j < n; j++)
             z.push_back(v[j][i]);
-
         temp.push_back(z);
     }
     for (int i = 0; i < temp.size(); i++)
