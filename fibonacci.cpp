@@ -30,7 +30,7 @@ int tabulation(int n) // Time : O(n), Space : O(n);
     return dp[n];
 }
 
-int recursive_memoize(int n, vector<int> &dp) // Time : O(n), Space : O(n) + O(n)(recursive stack);
+int recursive_memoize(int n, vector<int> &dp) // Time : O(n), Space : O(n) (Dp vector) + O(n)(recursive stack);
 {
     if (n == 1 || n == 0)
         return dp[n] = n;
