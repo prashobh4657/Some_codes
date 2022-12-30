@@ -3,15 +3,6 @@ using namespace std;
 #define ll long long
 #define mod 1000000007
 
-/*
- Question :  https://www.geeksforgeeks.org/search-a-word-in-a-2d-grid-of-characters/
- 8 Directions  : Up , down , right, left, 4 diagonals;
- Till now diagonal matching is not implmented
- that will be same as in case of n-queen.
- or i will implement it later
-  ==> in this question recursion is not involved;
-  ==> also see article solution, how they implemented using very short code unlike as that of mine;
-*/
 bool up(string s, vector<vector<char>> v, int r, int c)
 {
     int i = 0;
@@ -101,7 +92,6 @@ int main()
     string s;
     cin >> s;
     vector<pair<char, pair<int, int>>> ans;
-
     int count = 0;
     for (int i = 0; i < n; i++)
     {
@@ -138,3 +128,10 @@ int main()
 
     return 0;
 }
+
+/*
+Question :  https://www.geeksforgeeks.org/search-a-word-in-a-2d-grid-of-characters/
+==> 8 Directions  : Up , down , right, left, 4 directions diagonally;
+==> Till now diagonal matching is not implmented ==> That can also be implemented using (But code will be v. lengthy())
+==> In this question recursion is not involved;
+*/
