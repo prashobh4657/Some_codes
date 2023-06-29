@@ -30,7 +30,7 @@ vector<int> inorderTraversal(node *root) // TC : O(N), SC : O(1);
             while (prev->right != NULL && prev->right != temp) // prev->right!=temp condition is important in case if thread already exist then this loop will go in infinite loop; (We have to stop at last node in left-subtree);
                 prev = prev->right;
 
-            // Deciding where to move based on whether thread exist or not;
+            // Deciding where to move based on whether thread exist or not;  (Also above while loop will get end when either prev->right==NULL or prev->right=temp);
             if (prev->right == NULL) // Thread doesn't exist;
             {
                 prev->right = temp; // Make a thread;
